@@ -1,11 +1,10 @@
 'use client';
-import { navVariants } from '../utils/motion';
+
 import { motion } from 'framer-motion';
+import { navVariants } from '../utils/motion';
 import styles from '../styles';
 
-const Navbar = () => {
-
-  return (
+const Navbar = () => (
   <motion.nav
     variants={navVariants}
     initial="hidden"
@@ -16,7 +15,7 @@ const Navbar = () => {
     <div className={`${styles.innerWidth} mx-auto flex justify-between`}>
       <img src="/ieee_nitk.png" alt="search" className="w-[180px] object-contain" />
 
-      <div className='flex items-center justify-between gap-16'>
+      <div className="flex items-center justify-between gap-16">
         <h2 className="font-extrabold test-[24px] text-white">
           About
         </h2>
@@ -31,8 +30,9 @@ const Navbar = () => {
         </h2>
       </div>
 
-      <div className='flex items-center gap-16 w-[180px] justify-end'>
+      <div className="flex items-center gap-16 w-[180px] justify-end">
         <button className="font-extrabold test-[24px] text-white"
+          type="button"
           style={{
             background: '#e80d0d',
             padding: '12px 24px',
@@ -40,12 +40,11 @@ const Navbar = () => {
             boxShadow: '0 0 10px #f1871220, 0 0 20px #f1871220, 0 0 40px #f1871230, 0 0 60px #f1871220',
           }}
         >
-          Register Now 
+          Register Now
         </button>
       </div>
     </div>
   </motion.nav>
-)
-};
+);
 
 export default Navbar;
