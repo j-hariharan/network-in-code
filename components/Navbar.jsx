@@ -1,9 +1,7 @@
 'use client';
-
+import { navVariants } from '../utils/motion';
 import { motion } from 'framer-motion';
 import styles from '../styles';
-import { navVariants } from '../utils/motion';
-import { useEffect } from 'react';
 
 const Navbar = () => {
 
