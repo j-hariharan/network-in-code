@@ -13,13 +13,13 @@
 .gradient-01 {
   background-image: linear-gradient(
     270deg,
-    hsl(295deg 76% 51%) 0%,
-    hsl(284deg 70% 73%) 26%,
-    hsl(257deg 70% 86%) 39%,
-    hsl(202deg 92% 90%) 50%,
-    hsl(215deg 77% 81%) 61%,
-    hsl(221deg 73% 70%) 74%,
-    hsl(220deg 76% 51%) 100%
+    hsl(0, 100%, 20%) 0%,  /* Deep Red */
+    hsl(0, 100%, 30%) 26%, /* Darker Red */
+    hsl(0, 100%, 40%) 39%, /* Slightly Lighter Red */
+    hsl(0, 100%, 50%) 50%, /* Red */
+    hsl(0, 100%, 60%) 61%, /* Lighter Red */
+    hsl(0, 100%, 70%) 74%, /* Even Lighter Red */
+    hsl(0, 100%, 80%) 100% /* Light Red */
   );
   filter: blur(125px);
 }
@@ -27,9 +27,9 @@
 .hero-gradient {
   background: linear-gradient(
     97.86deg,
-    #a509ff 0%,
-    #34acc7 53.65%,
-    #a134c7 100%
+    #ff0000 0%,    /* Bright Red */
+    #a80000 53.65%, /* Dark Red */
+    #5c0000 100%    /* Very Dark Red */
   );
 }
 
@@ -40,16 +40,16 @@
   top: 0px;
   right: 0px;
 
-  background: #7aebfb;
+  background: #ff0000; /* Bright Red */
   filter: blur(190px);
 }
 
 .glassmorphism {
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background: rgba(0, 0, 0, 0.25);  /* Black with transparency */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);  /* Black shadow */
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(0, 0, 0, 0.18);  /* Black border with transparency */
 }
 
 .gradient-03 {
@@ -59,7 +59,7 @@
   left: 20%;
   top: 5%;
 
-  background: rgba(149, 66, 232, 0.35);
+  background: rgba(255, 0, 0, 0.35);  /* Red with transparency */
   filter: blur(175px);
   transform: rotate(-114.2deg);
 }
@@ -71,7 +71,7 @@
   left: 30%;
   top: 10%;
 
-  background: rgba(45, 72, 152, 0.75);
+  background: rgba(0, 0, 0, 0.75);  /* Black with transparency */
   filter: blur(200px);
   transform: rotate(-53.13deg);
 }
@@ -79,8 +79,8 @@
 .gradient-05 {
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.04) 0%,
-    rgba(255, 255, 255, 0) 100%
+    rgba(0, 0, 0, 0.04) 0%,  /* Black with slight transparency */
+    rgba(0, 0, 0, 0) 100%    /* Fully transparent */
   );
 }
 
@@ -91,7 +91,7 @@
   left: 0px;
   top: 0px;
 
-  background: #8d39a3;
+  background: #ff0000;  /* Bright Red */
   filter: blur(175px);
 }
 
@@ -102,6 +102,6 @@
   left: 37%;
   bottom: 0;
 
-  background: #65c4fa;
+  background: #000000;  /* Black */
   filter: blur(150px);
 }

@@ -19,6 +19,26 @@ export const navVariants = {
   },
 };
 
+// export const fadeIn = (direction = 'up', type = 'spring', delay = 0, duration = 1) => {
+//   return {
+//     hidden: {
+//       y: direction === 'bottom' ? 100 : -100,
+//       opacity: 0,
+//     },
+//     show: {
+//       y: 0,
+//       opacity: 1,
+//       transition: {
+//         type,
+//         delay,
+//         duration,
+//         ease: 'easeOut',
+//       },
+//     },
+//   };
+// };
+
+
 export const slideIn = (direction, type, delay, duration) => ({
   hidden: {
     x: direction === 'left' ? '-100%' : direction === 'right' ? '100%' : 0,

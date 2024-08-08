@@ -2,59 +2,76 @@
 
 import { motion } from 'framer-motion';
 import styles from '../styles';
-import { slideIn, staggerContainer, textVariant } from '../utils/motion';
+import { fadeIn, slideIn, staggerContainer, textVariant } from '../utils/motion';
+import { useEffect } from 'react';
 
-const Hero = () => (
-  <section className={`${styles.yPaddings} sm:pl-16 pl-6`}>
-    <motion.div
-      variants={staggerContainer}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: false, amount: 0.25 }}
-      className={`${styles.innerWidth2} mx-auto flex flex-col`}
+const Hero = () => 
+{
+
+  // useEffect(() => {
+  //   // get all elements and add red border
+  //   const elements = document.querySelectorAll('*');
+  //   elements.forEach((element) => {
+  //     element.style.border = '1px solid red';
+  //   });
+  // }, []);
+
+  return (
+    <section className={`${styles.yPaddings}`}
+      style={{
+        paddingTop: 0,
+      }}
     >
-      <div className="relative z-10 flex flex-col items-center justify-center">
-        <motion.h1
-          variants={textVariant(1.1)}
-          className={styles.heroHeading}
-        >
-          Metadroid
-        </motion.h1>
-        <motion.div
-          variants={textVariant(1.2)}
-          className="flex flex-row items-center justify-center"
-        >
-          <h1 className={styles.heroHeading}> Ma</h1>
-          <div className={styles.heroDText} />
-          <h1 className={styles.heroHeading}> Ness</h1>
-        </motion.div>
-      </div>
-
       <motion.div
-        variants={slideIn('right', 'tween', 0.2, 1)}
-        className="relative w-full lg:-mt-[30px] md:-mt-[18px] -mt-[15px]  2xl:pl-[280px]"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className={`${styles.innerWidth2} mx-auto flex flex-col items-center`}
       >
-        <div className="absolute w-full h-[300px] hero-gradient rounded-tl-[140px] z-[0] sm:-top-[20px] -top-[10px]" />
-        <img
-          src="/cover.png"
-          alt="cover"
-          className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative"
-        />
-
-        <a href="#explore">
-          <div className="w-full flex justify-end sm:-mt-[70px] -mt-[50px] pr-[40px] relative z-10 2xl:-ml-[100px]">
-            <motion.img
-              src="/stamp.png"
-              alt="stamp"
-              className="sm:w-[155px] w-[100px] sm:h-[155px] h-[100px] object-contain "
-              animate={{ rotate: 360 }}
-              transition={{ repeat: Infinity, duration: 7, repeatType: 'loop' }}
-            />
+        <motion.div
+          variants={fadeIn('bottom', 'tween', 0.2, 1)}
+          className="relative w-full flex justify-center"
+        >
+          <div className="absolute sm:w-[300px] sm:h-[300px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] xl:w-[700px] xl:h-[700px] 2xl:w-[800px] 2xl:h-[800px]
+            rounded-full bg-[#f88712] opacity-70 blur-[60px] z-[0] flex justify-center items-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+            shadow-[0_0_30px_#f18712, 0_0_60px_#f18712, 0_0_100px_#f18712, 0_0_150px_#f18712]" />
+          <img
+            style={{
+              marginTop: '-50px',
+            }}
+            src="/deadpool-2.png"
+            alt="cover"
+            className="rounded-[200px] z-10 relative sm:w-[300px] md:w-[400px] lg:w-[400px] xl:w-[500px] 2xl:w-[600px] h-auto"
+          />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center">
+            <motion.div
+              variants={textVariant(1.2)}
+              className="flex flex-row items-center justify-center mt-40"
+            >
+              <h1 className={styles.heroHeading}>Co</h1>
+              <div className="relative flex items-center justify-center">
+                <motion.div
+                  className={styles.heroDText}
+                  animate={{ x: [0, -5, 0, -5], y: [0, 5, 10, 5] }}
+                  transition={{ duration: 0.3, repeat: Infinity, repeatType: "reverse" }}
+                />
+              </div>
+              <h1 className={styles.heroHeading}>
+                e
+                <span
+                  style={{
+                    color: '#991412',
+                  }}
+                >
+                  Red
+                </span>
+              </h1>
+            </motion.div>
           </div>
-        </a>
+        </motion.div>
       </motion.div>
-    </motion.div>
-  </section>
-);
+    </section>
+  )};
 
 export default Hero;
