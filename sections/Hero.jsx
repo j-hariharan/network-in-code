@@ -25,7 +25,7 @@ const Hero = () =>
           variants={fadeIn('bottom', 'tween', 0.2, 1)}
           className="relative w-full flex justify-center"
         >
-          <div className="absolute sm:w-[350px] sm:h-[350px] md:w-[450px] md:h-[450px] lg:w-[450px] lg:h-[450px] xl:w-[550px] xl:h-[550px] 2xl:w-[650px] 2xl:h-[650px]
+          <div className="absolute w-[325px] h-[325px] sm:w-[350px] sm:h-[350px] md:w-[450px] md:h-[450px] lg:w-[450px] lg:h-[450px] xl:w-[550px] xl:h-[550px] 2xl:w-[650px] 2xl:h-[650px]
             rounded-full bg-[#fe0100] opacity-90 z-[0] flex justify-center items-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" 
             
             style={{
@@ -39,7 +39,7 @@ const Hero = () =>
             }}
             src="/deadpool-2.png"
             alt="cover"
-            className="rounded-[400px] z-10 relative sm:w-[300px] md:w-[400px] lg:w-[400px] xl:w-[500px] 2xl:w-[600px] h-auto"
+            className="rounded-[400px] z-10 relative w-[300px] sm:w-[300px] md:w-[400px] lg:w-[400px] xl:w-[500px] 2xl:w-[600px] h-auto"
           />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center">
             <motion.div
