@@ -19,7 +19,9 @@ const Footer = () => (
         <h4 className="font-bold md:text-[64px] text-[44px] text-white">
           Register Now
         </h4>
-        <button type="button" className="flex items-center h-fit py-4 px-6 bg-[#fe0100] rounded-[32px] gap-[12px]">
+        <button type="button" className="flex items-center h-fit py-4 px-6 bg-[#fe0100] rounded-[32px] gap-[12px]"
+          onClick={() => window.open('https://unstop.com/o/zspXwvc?utm_medium=Share&utm_source=shortUrl')}
+        >
           <span className="font-normal text-[16px] text-white">
             Register
           </span>
