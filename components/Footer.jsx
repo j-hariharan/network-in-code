@@ -1,7 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
+// import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 import { socials } from '../constants';
+import { EventCountDown } from './EventCountDown';
 
 import styles from '../styles';
 import { footerVariants } from '../utils/motion';
@@ -14,6 +16,9 @@ const Footer = () => (
     className={`${styles.xPaddings} py-8 relative`}
   >
     <div className="footer-gradient" />
+
+    <EventCountDown />
+
     <div className={`${styles.innerWidth} mx-auto flex flex-col gap-8`}>
       <div className="flex items-center justify-between flex-wrap gap-5">
         <h4 className="font-bold md:text-[64px] text-[44px] text-white">
