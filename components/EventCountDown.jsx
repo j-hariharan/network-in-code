@@ -43,7 +43,7 @@ export const EventCountDown = () => {
   }
 
   return (
-    <div className="flex justify-center items-center mb-20">
+    <div className="flex justify-center items-center mb-20 gap-4 flex-col md:flex-row">
       <div className="flex items-center justify-center gap-4 p-4 bg-black rounded-lg shadow-lg">
         <div className="flex flex-col items-center justify-center gap-1">
           <span className="font-bold text-6xl text-red-600">{timeLeft.remainingDays}</span>
