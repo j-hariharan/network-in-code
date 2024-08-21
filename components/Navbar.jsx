@@ -18,11 +18,15 @@ const Navbar = () => {
       whileInView="show"
       className={`${styles.xPaddings} py-8 relative`}
     >
-      <div className="absolute w-[50%] inset-0 gradient-01" />
+      <div className="absolute w-[50%] inset-0 gradient-01"
+        style={{
+          zIndex: '-1',
+        }}
+      />
       <div className={`${styles.innerWidth} mx-auto flex justify-between items-center flex-wrap md:flex-nowrap`}>
         <img src="/ieee_nitk.png" alt="logo" className="w-[120px] md:w-[180px] object-contain" />
 
-        {
+        {/* {
           isMobileOrTablet ? (
             <button
               type="button"
@@ -32,12 +36,16 @@ const Navbar = () => {
               <img src="/menu.svg" alt="menu" className="w-[32px] md:w-[48px] object-contain" />
             </button>
           ) : null
-        }
+        } */}
 
-        {
+        {/* {
           !isMobileOrTablet ? (
             <div className="flex items-center justify-center md:justify-between gap-8 md:gap-16 flex-wrap md:flex-nowrap w-full md:w-auto mt-4 md:mt-0 flex-col md:flex-row">
-              <h2 className="font-extrabold text-sm md:text-base text-white">
+              <h2 className="font-extrabold text-sm md:text-base text-white"
+                onClick={() => {
+                  document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 About
               </h2>
               <h2 className="font-extrabold text-sm md:text-base text-white">
@@ -51,12 +59,28 @@ const Navbar = () => {
               </h2>
             </div>
           ) : null
-        }
+        } */}
+
+        {/* <div className="flex items-center gap-8 md:gap-12 w-[200px] justify-end mt-20 md:mt-0">
+          <button className="font-extrabold text-[16px] text-white"
+            type="button"
+            style={{
+              background: '#e80d0d',
+              padding: '8px 16px',
+              borderRadius: '8px',
+              boxShadow: '0 0 10px #f1871220, 0 0 20px #f1871220, 0 0 40px #f1871230, 0 0 60px #f1871220',
+            }}
+            onClick={() => {
+              window.open('https://unstop.com/o/zspXwvc?utm_medium=Share&utm_source=shortUrl', '_blank');
+            }}
+          >
+          </button>
+        </div> */}
 
         {
-          !isMobileOrTablet && (
-            <div className="flex items-center gap-8 md:gap-12 w-[200px] justify-end mt-20 md:mt-0">
-              <button className="font-extrabold text-[16px] text-white"
+          !isMobileOrTablet ? (
+            <div className="flex items-center gap-8 md:gap-12 w-full justify-center">
+              <button className="font-extrabold text-[24px] text-white"
                 type="button"
                 style={{
                   background: '#e80d0d',
@@ -74,11 +98,13 @@ const Navbar = () => {
                 </div>
               </button>
             </div>
-          )
+          ) : null
         }
+
+        <img src="/cs_white.png" alt="compsoc-logo" className="w-[120px] md:w-[180px] object-contain" />
       </div>
 
-      {
+      {/* {
         (isNavbarExpanded && isMobileOrTablet) ? (
           <motion.div
             initial={{ y: -100, opacity: 0 }}
@@ -97,12 +123,12 @@ const Navbar = () => {
             </div>
           </motion.div>
         ) : null
-      }
+      } */}
 
       {
-        isMobileOrTablet && (
+        isMobileOrTablet ? (
           <div className="flex items-center gap-8 md:gap-12 w-full justify-center mt-20">
-            <button className="font-extrabold text-[16px] text-white"
+            <button className="font-extrabold text-[24px] text-white"
               type="button"
               style={{
                 background: '#e80d0d',
@@ -120,7 +146,7 @@ const Navbar = () => {
               </div>
             </button>
           </div>
-        )
+        ) : null
       }
 
     </motion.nav>
