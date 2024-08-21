@@ -1,13 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+// import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { navVariants } from '../utils/motion';
 import styles from '../styles';
 import useWindow from '../hooks/useWindow';
 
 const Navbar = () => {
-  const [isNavbarExpanded, setIsNavbarExpanded] = useState(false);
+  // const [isNavbarExpanded, setIsNavbarExpanded] = useState(false);
   const { isMobile, isTablet } = useWindow();
   const isMobileOrTablet = isMobile || isTablet;
 
