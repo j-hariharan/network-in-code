@@ -17,7 +17,7 @@ const About = () => (
       className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}
     >
       <TypingText
-        title="| About Metadroid"
+        title="About Code Red"
         textStyles="text-center"
       />
 
@@ -25,7 +25,11 @@ const About = () => (
         variants={fadeIn('up', 'tween', 0.2, 1)}
         className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white"
       >
-        <span className="font-extrabold"> Metadroid </span> is a new thing in the future, where you can enjoy the virtual world by feeling like it's really real, you can feel what you feel in this metaverse world, because this is really the <span className="font-extrabold">madness of the metaverse</span> of today, using only <span className="font-extrabold">VR</span> devices you can easily explore the metaverse world you want, turn your dreams into reality. Let's <span className="font-extrabold">explore</span> the madness of the metaverse by scrolling down
+        Welcome to <span className="font-extrabold"> Code Red </span>, where coding meets chaos, and you meet Deadpool. Brought to you by the mad geniuses at the IEEE NITK Computer Society, this <span className="font-extrabold"> 24-hour Capture-The-Flag (CTF) </span> styled competition is your ticket to proving you’ve got what it takes to survive in the wild world of <span className="font-extrabold"> Development </span>, <span className="font-extrabold"> Machine Learning </span>, <span className="font-extrabold"> Algorithms </span> , and <span className="font-extrabold"> Systems </span>.
+        <br />
+        <br />
+        <br />
+        Help Deadpool out of one of his classic jams. Whether you're a first-year student exploring the field or a second-year student sharpening your skills, CODE RED is your gateway to mastering the essentials in a fun and engaging way.
       </motion.p>
 
       <motion.img

@@ -27,9 +27,30 @@ export const exploreWorlds = [
 ];
 
 export const startingFeatures = [
-  'Find a world that suits you and you want to enter',
-  'Enter the world by reading precaution to be safe',
-  'No need to beat around the bush, just stay on the gas and have fun',
+  {
+    index: '11k+',
+    text: 'Prize pool. Participation certificates will be provided to losers.',
+  },
+  {
+    index: '24',
+    text: 'Hours of non-stop coding and fun.',
+  },
+  {
+    index: '500+',
+    text: 'Participants from across the country.',
+  },
+  {
+    index: '50+',
+    text: 'Challenges to test your skills.',
+  },
+  {
+    index: '3',
+    text: 'Members max per team. Deadpools dont work well in large groups.',
+  },
+  {
+    index: '1',
+    text: 'Deadpool to guide you through the chaos.',
+  },
 ];
 
 export const newFeatures = [

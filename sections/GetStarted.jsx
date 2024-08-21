@@ -1,11 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 import styles from '../styles';
 import { staggerContainer, fadeIn, planetVariants } from '../utils/motion';
 import { StartSteps, TitleText, TypingText } from '../components';
 
 import { startingFeatures } from '../constants';
+// import { scrape } from '../utils/scrape';
 
 const GetStarted = () => (
   <section className={`${styles.paddings} relative z-10`}>
@@ -20,20 +22,20 @@ const GetStarted = () => (
         variants={planetVariants('left')}
         className={`${styles.flexCenter} flex-1`}
       >
-        <img src="/get-started.png" alt="Get-Started" className="w-[90%] h-[90%] object-content" />
+        <img src="/deadpool-rules.png" alt="Get-Started" className="object-content" />
       </motion.div>
       <motion.div
         variants={fadeIn('left', 'tween', 0.2, 1)}
         className="flex-[0.75] flex justify-center flex-col"
       >
-        <TypingText title="| How MetaDroid Works " />
-        <TitleText title={<> Get Started with just a few clicks </>} />
+        <TypingText title="Register your team now" />
+        <TitleText title={<>  </>} />
         <div className="mt-[31px] flex flex-col max-w-[370px] gap-[24px]">
-          {startingFeatures.map((features, index) => (
+          {startingFeatures.map((features) => (
             <StartSteps
-              key={features}
-              number={index + 1}
-              text={features}
+              key={features.text}
+              number={features.index}
+              text={features.text}
             />
           ))}
         </div>
