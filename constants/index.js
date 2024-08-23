@@ -1,28 +1,27 @@
 export const exploreWorlds = [
   {
     id: 'world-1',
-    imgUrl: '/planet-01.png',
-    title: 'The Hogwarts',
+    imgUrl: '/dsa2.jpeg',
+    title: 'Data Structures and Algorithms',
+    description: 'Sharpen your DSA skills with our challenges. GeeksForGeeks, Striver, and Codeforces are your best friends in helping you prepare for this.',
   },
   {
     id: 'world-2',
-    imgUrl: '/planet-02.png',
-    title: 'The Upside Down',
+    imgUrl: '/ml.webp',
+    title: 'Machine Learning',
+    description: 'Get your hands dirty with some real-world datasets and build models to predict the future. Kaggle is your best friend in this domain.',
   },
   {
     id: 'world-3',
-    imgUrl: '/planet-03.png',
-    title: 'Hueco Mundo',
+    imgUrl: '/system2.jpg',
+    title: 'Systems',
+    description: 'Understand how code works at the lowest level.',
   },
   {
     id: 'world-4',
-    imgUrl: '/planet-04.png',
-    title: 'Paradise Island',
-  },
-  {
-    id: 'world-5',
-    imgUrl: '/planet-05.png',
-    title: 'Hawkins Labs',
+    imgUrl: '/dev.jpg',
+    title: 'Development',
+    description: 'Build cool projects and learn new technologies.',
   },
 ];
 
@@ -55,16 +54,16 @@ export const startingFeatures = [
 
 export const newFeatures = [
   {
-    imgUrl: '/vrpano.svg',
-    title: 'A new world',
+    imgUrl: '/prize.svg',
+    title: 'Cash Prizes and Goodies',
     subtitle:
-        'we have the latest update with new world for you to try never mind',
+        'Prizes worth 11k+ for the winners. Participation certificates will be provided to all participants.',
   },
   {
-    imgUrl: '/headset.svg',
-    title: 'More realistic',
+    imgUrl: '/pizza.svg',
+    title: 'Somebody say Pizza?',
     subtitle:
-        'In the latest update, your eyes are narrow, making the world more realistic than ever',
+        'Free pizza for all participants (at CCC, NITK only). Just kidding, we are broke.',
   },
 ];
 
@@ -93,16 +92,16 @@ export const socials = [
   {
     name: 'twitter',
     url: '/twitter.svg',
-    link: '',
+    link: 'https://x.com/ieee_nitk',
   },
   {
     name: 'linkedin',
     url: '/linkedin.svg',
-    link: '',
+    link: 'https://www.linkedin.com/company/ieee-nitk-surathkal/',
   },
   {
     name: 'instagram',
     url: '/instagram.svg',
-    link: '',
+    link: 'https://www.instagram.com/ieee_nitk?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
   },
 ];

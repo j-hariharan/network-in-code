@@ -18,11 +18,7 @@ const Navbar = () => {
       whileInView="show"
       className={`${styles.xPaddings} py-8 relative`}
     >
-      <div className="absolute w-[50%] inset-0 gradient-01"
-        style={{
-          zIndex: '-1',
-        }}
-      />
+      <div className="absolute w-[50%] inset-0 gradient-01" />
       <div className={`${styles.innerWidth} mx-auto flex justify-between items-center flex-wrap md:flex-nowrap`}>
         <img src="/ieee_nitk.png" alt="logo" className="w-[120px] md:w-[180px] object-contain" />
 
