@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { navVariants } from '../utils/motion';
 import styles from '../styles';
 import useWindow from '../hooks/useWindow';
+import { basePath } from '../next.config';
 
 const Navbar = () => {
   // const [isNavbarExpanded, setIsNavbarExpanded] = useState(false);
@@ -20,7 +21,7 @@ const Navbar = () => {
     >
       <div className="absolute w-[50%] inset-0 gradient-01" />
       <div className={`${styles.innerWidth} mx-auto flex justify-between items-center flex-wrap md:flex-nowrap`}>
-        <img src="/ieee_nitk.png" alt="logo" className="w-[120px] md:w-[180px] object-contain" />
+        <img src={`${basePath}/ieee_nitk.png`} alt="logo" className="w-[120px] md:w-[180px] object-contain" />
 
         {/* {
           isMobileOrTablet ? (
