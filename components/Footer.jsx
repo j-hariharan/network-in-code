@@ -6,6 +6,7 @@ import { socials } from '../constants';
 
 import styles from '../styles';
 import { footerVariants } from '../utils/motion';
+import { basePath } from '../next.config';
 
 const Footer = () => (
   <motion.footer
@@ -45,7 +46,7 @@ const Footer = () => (
             {socials.map((social) => (
               <a key={social.name} href={social.link}>
                 <img
-                  src={social.url}
+                  src={basePath + social.url}
                   alt={social.name}
                   className="w-[24px] h-[24px] object-contain"
                 />

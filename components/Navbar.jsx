@@ -91,14 +91,14 @@ const Navbar = () => {
               >
                 <div className="flex items-center">
                   Register Now
-                  <img src="/unstop-logo.svg" alt="unstop logo" className="w-[32px] md:w-[64px] object-contain ml-2 md:ml-4" />
+                  <img src={`${basePath}/unstop-logo.svg`} alt="unstop logo" className="w-[32px] md:w-[64px] object-contain ml-2 md:ml-4" />
                 </div>
               </button>
             </div>
           ) : null
         }
 
-        <img src="/cs_white.png" alt="compsoc-logo" className="w-[120px] md:w-[180px] object-contain" />
+        <img src={`${basePath}/cs_white.png`} alt="compsoc-logo" className="w-[120px] md:w-[180px] object-contain" />
       </div>
 
       {/* {
@@ -139,7 +139,7 @@ const Navbar = () => {
             >
               <div className="flex items-center">
                 Register Now
-                <img src="/unstop-logo.svg" alt="unstop logo" className="w-[32px] md:w-[64px] object-contain ml-2 md:ml-4" />
+                <img src={`${basePath}/unstop-logo.svg`} alt="unstop logo" className="w-[32px] md:w-[64px] object-contain ml-2 md:ml-4" />
               </div>
             </button>
           </div>

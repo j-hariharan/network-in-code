@@ -6,6 +6,7 @@ import styles from '../styles';
 import { newFeatures } from '../constants';
 import { NewFeatures, TitleText, TypingText } from '../components';
 import { planetVariants, staggerContainer, fadeIn } from '../utils/motion';
+import { basePath } from '../next.config';
 
 const WhatsNew = () => (
   <section className={`${styles.paddings} relative z-10`}>
@@ -34,7 +35,7 @@ const WhatsNew = () => (
         className={`flex-1 ${styles.flexCenter}`}
       >
         <img
-          src="/deaddog.png"
+          src={`${basePath}/deaddog.png`}
           alt="get-started"
           className="w-[90%] h-[90%] object-contain"
           style={{

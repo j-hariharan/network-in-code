@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import styles from '../styles';
 import { fadeIn, staggerContainer, textVariant } from '../utils/motion';
+import { basePath } from '../next.config';
 
 const Hero = () => (
   <section className={`${styles.yPaddings}`}
@@ -32,7 +33,7 @@ const Hero = () => (
           style={{
             marginTop: '-50px',
           }}
-          src="/deadpool-2.png"
+          src={`${basePath}/deadpool-2.png`}
           alt="cover"
           className="rounded-[400px] z-10 relative w-[300px] sm:w-[300px] md:w-[400px] lg:w-[400px] xl:w-[500px] 2xl:w-[600px] h-auto"
         />

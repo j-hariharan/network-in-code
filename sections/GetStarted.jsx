@@ -7,6 +7,7 @@ import { staggerContainer, fadeIn, planetVariants } from '../utils/motion';
 import { StartSteps, TitleText, TypingText } from '../components';
 
 import { startingFeatures } from '../constants';
+import { basePath } from '../next.config';
 // import { scrape } from '../utils/scrape';
 
 const GetStarted = () => (
@@ -22,7 +23,7 @@ const GetStarted = () => (
         variants={planetVariants('left')}
         className={`${styles.flexCenter} flex-1`}
       >
-        <img src="/deadpool-rules.png" alt="Get-Started" className="object-content" />
+        <img src={`${basePath}/deadpool-rules.png`} alt="Get-Started" className="object-content" />
       </motion.div>
       <motion.div
         variants={fadeIn('left', 'tween', 0.2, 1)}
