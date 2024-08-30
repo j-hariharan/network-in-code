@@ -1,16 +1,25 @@
 'use client';
 
-// import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { navVariants } from '../utils/motion';
 import styles from '../styles';
 import useWindow from '../hooks/useWindow';
 import { basePath } from '../next.config';
+import { eventEnd, eventStart } from '../constants';
 
 const Navbar = () => {
   // const [isNavbarExpanded, setIsNavbarExpanded] = useState(false);
   const { isMobile, isTablet } = useWindow();
   const isMobileOrTablet = isMobile || isTablet;
+  const [eventHasStarted, setEventHasStarted] = useState(false);
+  const [eventHasEnded, setEventHasEnded] = useState(false);
+
+  useEffect(() => {
+    const currentTime = new Date().getTime();
+    setEventHasStarted(currentTime > eventStart);
+    setEventHasEnded(currentTime > eventEnd);
+  }, []);
 
   return (
     <motion.nav
@@ -86,12 +95,23 @@ const Navbar = () => {
                   boxShadow: '0 0 10px #f1871220, 0 0 20px #f1871220, 0 0 40px #f1871230, 0 0 60px #f1871220',
                 }}
                 onClick={() => {
-                  window.open('https://unstop.com/o/zspXwvc?utm_medium=Share&utm_source=shortUrl', '_blank');
+                  if (eventHasStarted) {
+                    window.open('https://codered-ieee.nitk.ac.in/login');
+                  } else if (eventHasEnded) {
+                    // Do nothing
+                  } else {
+                    window.open('https://unstop.com/o/zspXwvc?utm_medium=Share&utm_source=shortUrl');
+                  }
                 }}
               >
-                <div className="flex items-center">
-                  Register Now
-                  <img src={`${basePath}/unstop-logo.svg`} alt="unstop logo" className="w-[32px] md:w-[64px] object-contain ml-2 md:ml-4" />
+                <div className="flex items-center"
+                  style={{ zIndex: 1000 }}
+                >
+                  {
+                    eventHasStarted ? eventHasEnded ? 'Event Ended' : 'Join Event'
+                      : 'Register Now'
+                  }
+                  { !eventHasStarted && <img src={`${basePath}/unstop-logo.svg`} alt="unstop logo" className="w-[32px] md:w-[64px] object-contain ml-2 md:ml-4" /> }
                 </div>
               </button>
             </div>
@@ -138,8 +158,13 @@ const Navbar = () => {
               }}
             >
               <div className="flex items-center">
-                Register Now
-                <img src={`${basePath}/unstop-logo.svg`} alt="unstop logo" className="w-[32px] md:w-[64px] object-contain ml-2 md:ml-4" />
+                {
+                  eventHasStarted ? eventHasEnded ? 'Event Ended' : 'Join Event'
+                    : 'Register Now'
+                }
+                {
+                  !eventHasStarted && <img src={`${basePath}/unstop-logo.svg`} alt="unstop logo" className="w-[32px] md:w-[64px] object-contain ml-2 md:ml-4" />
+                }
               </div>
             </button>
           </div>

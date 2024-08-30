@@ -105,3 +105,6 @@ export const socials = [
     link: 'https://www.instagram.com/ieee_nitk?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
   },
 ];
+
+export const eventStart = new Date('2024-08-31T18:00:00').getTime();
+export const eventEnd = new Date('2024-09-01T18:00:00').getTime();

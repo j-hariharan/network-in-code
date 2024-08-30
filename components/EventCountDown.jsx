@@ -1,13 +1,15 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { eventEnd, eventStart } from '../constants';
 
 export const EventCountDown = () => {
-  const eventEnd = new Date('2024-08-31T18:00:00').getTime();
+  const [eventHasStarted, setEventHasStarted] = useState(false);
+  const [eventHasEnded, setEventHasEnded] = useState(false);
 
   const calculateTimeLeft = () => {
     const currentTime = new Date().getTime();
-    const remainingTime = eventEnd - currentTime > 0 ? eventEnd - currentTime : 0;
+    const remainingTime = eventStart - currentTime > 0 ? eventStart - currentTime : 0;
 
     const remainingDays = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
     const remainingHours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -22,6 +24,12 @@ export const EventCountDown = () => {
       remainingSeconds,
     };
   };
+
+  useEffect(() => {
+    const currentTime = new Date().getTime();
+    setEventHasStarted(currentTime > eventStart);
+    setEventHasEnded(currentTime > eventEnd);
+  }, []);
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
   const [isMounted, setIsMounted] = useState(false);
@@ -75,15 +83,43 @@ export const EventCountDown = () => {
             <button
               type="button"
               className="mt-4 py-2 px-4 bg-red-600 text-white rounded-lg"
-              onClick={() => window.open('https://unstop.com/o/zspXwvc?utm_medium=Share&utm_source=shortUrl')}
+              onClick={() => {
+                if (eventHasStarted) {
+                  window.open('https://codered-ieee.nitk.ac.in/login');
+                } else if (eventHasEnded) {
+                  // Do nothing
+                } else {
+                  window.open('https://unstop.com/o/zspXwvc?utm_medium=Share&utm_source=shortUrl');
+                }
+              }}
             >
-              Register Now
+              {
+                eventHasStarted ? eventHasEnded ? 'Event Ended' : 'Join Event'
+                  : 'Register Now'
+              }
             </button>
           </div>
         ) : (
           <div className="flex flex-col items-center justify-center gap-1 ml-4">
             <span className="font-bold text-2xl text-white">Event</span>
-            <span className="font-normal text-sm text-white opacity-80">has ended</span>
+            <span className="font-normal text-sm text-white opacity-80">
+              {
+                eventHasEnded ? 'has ended' : 'is live'
+              }
+            </span>
+            {
+              eventHasEnded ? null : (
+                <button
+                  type="button"
+                  className="mt-4 py-2 px-4 bg-red-600 text-white rounded-lg"
+                  onClick={() => {
+                    window.open('https://codered-ieee.nitk.ac.in/login');
+                  }}
+                >
+                  Join Event
+                </button>
+              )
+            }
           </div>
         )
       }
