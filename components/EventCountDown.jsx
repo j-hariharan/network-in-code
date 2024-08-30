@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 
 export const EventCountDown = () => {
-  const eventEnd = new Date('2024-09-01T18:00:00').getTime();
+  const eventEnd = new Date('2024-08-31T18:00:00').getTime();
 
   const calculateTimeLeft = () => {
     const currentTime = new Date().getTime();
