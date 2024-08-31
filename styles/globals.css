@@ -2,11 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @import url('https://fonts.googleapis.com/css?family=League+Spartan&display=swap');
 /* import font from rougehero.ttf file */
 @font-face {
   font-family: "Rouge Hero";
-  src: url("landing/roguehero.ttf") format("truetype");
+  src: url("/roguehero.ttf") format("truetype");
 }
 
 * {
