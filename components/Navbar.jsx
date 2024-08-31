@@ -154,7 +154,13 @@ const Navbar = () => {
                 boxShadow: '0 0 10px #f1871220, 0 0 20px #f1871220, 0 0 40px #f1871230, 0 0 60px #f1871220',
               }}
               onClick={() => {
-                window.open('https://unstop.com/o/zspXwvc?utm_medium=Share&utm_source=shortUrl', '_blank');
+                if (eventHasStarted) {
+                  window.open('https://codered-ieee.nitk.ac.in/login');
+                } else if (eventHasEnded) {
+                  // Do nothing
+                } else {
+                  window.open('https://unstop.com/o/zspXwvc?utm_medium=Share&utm_source=shortUrl');
+                }
               }}
             >
               <div className="flex items-center">
