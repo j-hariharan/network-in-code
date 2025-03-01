@@ -2,68 +2,70 @@ export const exploreWorlds = [
   {
     id: 'world-1',
     imgUrl: '/dsa2.jpeg',
-    title: 'Data Structures and Algorithms',
-    description: 'Sharpen your DSA skills with our challenges. GeeksForGeeks, Striver, and Codeforces are your best friends in helping you prepare for this.',
+    title: 'Code Challenge',
+    description: 'Solve a given problem challenge statement.',
   },
   {
     id: 'world-2',
     imgUrl: '/ml.webp',
-    title: 'Machine Learning',
-    description: 'Get your hands dirty with some real-world datasets and build models to predict the future. Kaggle is your best friend in this domain.',
+    title: 'Bug-fixes',
+    description: 'Fixing existing issues in open-source projects or new developments.',
   },
   {
     id: 'world-3',
     imgUrl: '/system2.jpg',
-    title: 'Systems',
-    description: 'Understand how code works at the lowest level.',
+    title: 'New Features',
+    description: 'Implementing new functionalities in existing networking projects.',
   },
   {
     id: 'world-4',
     imgUrl: '/dev.jpg',
-    title: 'Development',
-    description: 'Build cool projects and learn new technologies.',
+    title: 'Code Optimization',
+    description: 'Improving the efficiency of networking-related code.',
   },
 ];
 
 export const startingFeatures = [
   {
-    index: '11k+',
-    text: 'Prize pool. Participation certificates will be provided to losers.',
+    index: '2L',
+    text: 'Prize pool and a chance to intern at IISc Bangalore!',
   },
   {
-    index: '24',
-    text: 'Hours of non-stop coding and fun.',
+    index: '5',
+    text: 'Days of non-stop problem solving.',
   },
   {
-    index: '500+',
-    text: 'Participants from across the country.',
+    index: '100s',
+    text: 'Of participants from across the country.',
   },
   {
-    index: '50+',
+    index: '6+',
     text: 'Challenges to test your skills.',
   },
   {
-    index: '3',
-    text: 'Members max per team. Deadpools dont work well in large groups.',
-  },
-  {
     index: '1',
-    text: 'Deadpool to guide you through the chaos.',
+    text: 'Member per team. Let your individual prowess shine.',
   },
 ];
 
 export const newFeatures = [
   {
     imgUrl: '/prize.svg',
-    title: 'Cash Prizes and Goodies',
+    title: 'Winner Prizes',
     subtitle:
-        'Prizes worth 11k+ for the winners. Participation certificates will be provided to all participants.',
+        'Prizes worth INR 2,00,000 for the winners :)',
   },
   {
-    imgUrl: '/pizza.svg',
-    title: 'Somebody say Pizza?',
+    imgUrl: '/gift.svg',
+    title: 'Somebody said goodies?',
     subtitle:
-        'Free pizza for all participants (at CCC, NITK only). Just kidding, we are broke.',
+        'Exciting goodies for participants.',
+  },
+  {
+    imgUrl: '/landmark.svg',
+    title: 'Internship',
+    subtitle:
+        'A chance to intern at IISc Bangalore!!',
   },
 ];
 
@@ -106,5 +108,5 @@ export const socials = [
   },
 ];
 
-export const eventStart = new Date('2024-08-31T18:00:00').getTime();
-export const eventEnd = new Date('2024-09-01T18:00:00').getTime();
+export const eventStart = new Date('2025-03-12T18:00:00').getTime();
+export const eventEnd = new Date('2025-03-26T18:00:00').getTime();

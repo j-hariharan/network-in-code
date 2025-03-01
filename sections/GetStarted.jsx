@@ -23,7 +23,7 @@ const GetStarted = () => (
         variants={planetVariants('left')}
         className={`${styles.flexCenter} flex-1`}
       >
-        <img src={`${basePath}/deadpool-rules.png`} alt="Get-Started" className="object-content" />
+        <img src={`${basePath}/hack_image.png`} alt="Get-Started" className="max-w-[500px] object-content" />
       </motion.div>
       <motion.div
         variants={fadeIn('left', 'tween', 0.2, 1)}

@@ -6,31 +6,20 @@ import { navVariants } from '../utils/motion';
 import styles from '../styles';
 import useWindow from '../hooks/useWindow';
 import { basePath } from '../next.config';
-import { eventEnd, eventStart } from '../constants';
 
 const Navbar = () => {
-  // const [isNavbarExpanded, setIsNavbarExpanded] = useState(false);
-  const { isMobile, isTablet } = useWindow();
-  const isMobileOrTablet = isMobile || isTablet;
-  const [eventHasStarted, setEventHasStarted] = useState(false);
-  const [eventHasEnded, setEventHasEnded] = useState(false);
-
-  useEffect(() => {
-    const currentTime = new Date().getTime();
-    setEventHasStarted(currentTime > eventStart);
-    setEventHasEnded(currentTime > eventEnd);
-  }, []);
 
   return (
     <motion.nav
       variants={navVariants}
       initial="hidden"
       whileInView="show"
-      className={`${styles.xPaddings} py-8 relative`}
+      className={`${styles.xPaddings} py-8 w-full top-0 z-10`}
     >
       <div className="absolute w-[50%] inset-0 gradient-01" />
       <div className={`${styles.innerWidth} mx-auto flex justify-between items-center flex-wrap md:flex-nowrap`}>
-        <img src={`${basePath}/ieee_nitk.png`} alt="logo" className="w-[120px] md:w-[180px] object-contain" />
+        <img src={`${basePath}/CNI.png`} alt="logo" className="w-[220px] md:w-[270px] object-contain" />
+        <img src={`${basePath}/COSH.png`} alt="logo" className="w-[180px] md:w-[230px] object-contain invert" />
 
         {/* {
           isMobileOrTablet ? (
@@ -74,51 +63,17 @@ const Navbar = () => {
               background: '#e80d0d',
               padding: '8px 16px',
               borderRadius: '8px',
-              boxShadow: '0 0 10px #f1871220, 0 0 20px #f1871220, 0 0 40px #f1871230, 0 0 60px #f1871220',
+              boxShadow: '0 0 10px #00bceb33, 0 0 20px #00bceb33, 0 0 40px #f1871230, 0 0 60px #00bceb33',
             }}
             onClick={() => {
-              window.open('https://unstop.com/o/zspXwvc?utm_medium=Share&utm_source=shortUrl', '_blank');
+              window.open('https://unstop.com/p/network-in-code-indian-institute-of-science-iisc-bangalore-1415099', '_blank');
             }}
           >
           </button>
         </div> */}
 
-        {
-          !isMobileOrTablet ? (
-            <div className="flex items-center gap-8 md:gap-12 w-full justify-center">
-              <button className="font-extrabold text-[24px] text-white"
-                type="button"
-                style={{
-                  background: '#e80d0d',
-                  padding: '8px 16px',
-                  borderRadius: '8px',
-                  boxShadow: '0 0 10px #f1871220, 0 0 20px #f1871220, 0 0 40px #f1871230, 0 0 60px #f1871220',
-                }}
-                onClick={() => {
-                  if (eventHasStarted) {
-                    window.open('https://codered-ieee.nitk.ac.in/login');
-                  } else if (eventHasEnded) {
-                    // Do nothing
-                  } else {
-                    window.open('https://unstop.com/o/zspXwvc?utm_medium=Share&utm_source=shortUrl');
-                  }
-                }}
-              >
-                <div className="flex items-center"
-                  style={{ zIndex: 1000 }}
-                >
-                  {
-                    eventHasStarted ? eventHasEnded ? 'Event Ended' : 'Join Event'
-                      : 'Register Now'
-                  }
-                  { !eventHasStarted && <img src={`${basePath}/unstop-logo.svg`} alt="unstop logo" className="w-[32px] md:w-[64px] object-contain ml-2 md:ml-4" /> }
-                </div>
-              </button>
-            </div>
-          ) : null
-        }
 
-        <img src={`${basePath}/cs_white.png`} alt="compsoc-logo" className="w-[120px] md:w-[180px] object-contain" />
+        <img src={`${basePath}/cisco.png`} alt="compsoc-logo" className="w-[100px] md:w-[150px] object-contain" />
       </div>
 
       {/* {
@@ -141,41 +96,6 @@ const Navbar = () => {
           </motion.div>
         ) : null
       } */}
-
-      {
-        isMobileOrTablet ? (
-          <div className="flex items-center gap-8 md:gap-12 w-full justify-center mt-20">
-            <button className="font-extrabold text-[24px] text-white"
-              type="button"
-              style={{
-                background: '#e80d0d',
-                padding: '8px 16px',
-                borderRadius: '8px',
-                boxShadow: '0 0 10px #f1871220, 0 0 20px #f1871220, 0 0 40px #f1871230, 0 0 60px #f1871220',
-              }}
-              onClick={() => {
-                if (eventHasStarted) {
-                  window.open('https://codered-ieee.nitk.ac.in/login');
-                } else if (eventHasEnded) {
-                  // Do nothing
-                } else {
-                  window.open('https://unstop.com/o/zspXwvc?utm_medium=Share&utm_source=shortUrl');
-                }
-              }}
-            >
-              <div className="flex items-center">
-                {
-                  eventHasStarted ? eventHasEnded ? 'Event Ended' : 'Join Event'
-                    : 'Register Now'
-                }
-                {
-                  !eventHasStarted && <img src={`${basePath}/unstop-logo.svg`} alt="unstop logo" className="w-[32px] md:w-[64px] object-contain ml-2 md:ml-4" />
-                }
-              </div>
-            </button>
-          </div>
-        ) : null
-      }
 
     </motion.nav>
   );

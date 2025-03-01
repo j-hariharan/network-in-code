@@ -51,25 +51,25 @@ export const EventCountDown = () => {
   }
 
   return (
-    <div className="flex justify-center items-center mb-20 gap-4 flex-col md:flex-row">
-      <div className="flex items-center justify-center gap-4 p-4 bg-black rounded-lg shadow-lg">
+    <div className="flex justify-center items-center mb-20 gap-4 flex-col md:flex-row z-10 relative">
+      <div className="flex items-center justify-center gap-4 p-4 rounded-lg shadow-lg">
         <div className="flex flex-col items-center justify-center gap-1">
-          <span className="font-bold text-6xl text-red-600">{timeLeft.remainingDays}</span>
+          <span className="font-bold text-6xl text-[#00bceb]">{timeLeft.remainingDays}</span>
           <span className="font-normal text-sm text-white opacity-80">Days</span>
         </div>
-        <span className="font-bold text-2xl text-white">:</span>
+        <span className="font-bold text-2xl text-white pb-5">:</span>
         <div className="flex flex-col items-center justify-center gap-1">
-          <span className="font-bold text-6xl text-red-600">{timeLeft.remainingHours}</span>
+          <span className="font-bold text-6xl text-[#00bceb]">{timeLeft.remainingHours}</span>
           <span className="font-normal text-sm text-white opacity-80">Hours</span>
         </div>
-        <span className="font-bold text-2xl text-white">:</span>
+        <span className="font-bold text-2xl text-white pb-5">:</span>
         <div className="flex flex-col items-center justify-center gap-1">
-          <span className="font-bold text-6xl text-red-600">{timeLeft.remainingMinutes}</span>
+          <span className="font-bold text-6xl text-[#00bceb]">{timeLeft.remainingMinutes}</span>
           <span className="font-normal text-sm text-white opacity-80">Minutes</span>
         </div>
-        <span className="font-bold text-2xl text-white">:</span>
+        <span className="font-bold text-2xl text-white pb-5">:</span>
         <div className="flex flex-col items-center justify-center gap-1">
-          <span className="font-bold text-6xl text-red-600">{timeLeft.remainingSeconds}</span>
+          <span className="font-bold text-6xl text-[#00bceb]">{timeLeft.remainingSeconds}</span>
           <span className="font-normal text-sm text-white opacity-80">Seconds</span>
         </div>
       </div>
@@ -82,7 +82,7 @@ export const EventCountDown = () => {
 
             <button
               type="button"
-              className="mt-4 py-2 px-4 bg-red-600 text-white rounded-lg"
+              className="mt-4 py-2 px-4 bg-[#1e4471] text-white rounded-lg"
               onClick={() => {
                 if (eventHasStarted) {
                   window.open('https://codered-ieee.nitk.ac.in/login');

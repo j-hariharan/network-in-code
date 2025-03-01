@@ -22,31 +22,12 @@ const WhatsNew = () => (
         className="flex-[0.95] flex justify-center flex-col"
       >
         <TypingText title="Prizes?" />
-        <TitleText title={<>Prizes and Goodies worth 11k+</>} />
+        <TitleText title={<>Participate and win big!</>} />
         <div className="mt-[48px] flex flex-wrap justify-between gap-[24px]">
           {newFeatures.map((feature) => (
             <NewFeatures key={feature.title} {...feature} />
           ))}
         </div>
-      </motion.div>
-
-      <motion.div
-        variants={planetVariants('right')}
-        className={`flex-1 ${styles.flexCenter}`}
-      >
-        <img
-          src={`${basePath}/deaddog.png`}
-          alt="get-started"
-          className="w-[90%] h-[90%] object-contain"
-          style={{
-            // add a slight black glow to the png image
-            filter: 'drop-shadow(2px 10px 5px rgba(0, 0, 0, 0.3)) brightness(0.9) contrast(0.9)',
-            // blur the image slightly
-            // webkitFilter: 'blur(0.8px)',
-            // reduce the contrast of the image
-            // filter: 'contrast(0.8)',
-          }}
-        />
       </motion.div>
     </motion.div>
   </section>

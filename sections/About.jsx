@@ -18,19 +18,19 @@ const About = () => (
       className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}
     >
       <TypingText
-        title="About Code Red"
-        textStyles="text-center"
+        title="About Network In Code"
+        textStyles="text-center text-4xl font-semibold mb-2"
       />
 
       <motion.p
         variants={fadeIn('up', 'tween', 0.2, 1)}
-        className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white"
+        className="mt-[8px] font-normal sm:text-[23px] text-[16px] text-center text-secondary-white"
       >
-        Welcome to <span className="font-extrabold"> Code Red </span>, where coding meets chaos, and you meet Deadpool. Brought to you by the mad geniuses at the IEEE NITK Computer Society, this <span className="font-extrabold"> 24-hour Capture-The-Flag (CTF) </span> styled competition is your ticket to proving you’ve got what it takes to survive in the wild world of <span className="font-extrabold"> Development </span>, <span className="font-extrabold"> Machine Learning </span>, <span className="font-extrabold"> Algorithms </span> , and <span className="font-extrabold"> Systems </span>.
+        We are excited to announce <span className='font-semibold'>Network In Code (NIC)</span>, a hands-on Networking & Systems coding program, organized by <span className="font-semibold">CNI IISc</span>, co-hosted by <span className="font-semibold">COSH NITK</span>, and supported by <span className="font-semibold">Cisco Corporate Social Responsibility</span>.
         <br />
         <br />
         <br />
-        Help Deadpool out of one of his classic jams. Whether you're a first-year student exploring the field or a second-year student sharpening your skills, CODE RED is your gateway to mastering the essentials in a fun and engaging way.
+        Network In Code (NIC) is a two-week-long competition designed to challenge students in systems and networking. Participants will tackle real-world problems in eBPF, network simulations, containers, Kubernetes, network security, and IPv6. The event provides a unique opportunity to gain hands-on experience and compete for awards worth INR 2,00,000 and an intership at IISc.
       </motion.p>
 
       <motion.img

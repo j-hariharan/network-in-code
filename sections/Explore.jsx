@@ -22,7 +22,7 @@ const Explore = () => {
         className={`${styles.innerWidth} mx-auto flex flex-col`}
       >
         <TypingText title="Domains" textStyles="text-center" />
-        <TitleText title={<>Questions from multiple domains <br className="md:block hidden " />to Explore</>} textStyles="text-center" />
+        <TitleText title={<>Challenges from multiple domains <br className="md:block hidden " />to Explore</>} textStyles="text-center" />
 
         <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
           {exploreWorlds.map((world, index) => (
