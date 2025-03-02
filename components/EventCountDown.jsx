@@ -89,7 +89,7 @@ export const EventCountDown = () => {
                 } else if (eventHasEnded) {
                   // Do nothing
                 } else {
-                  window.open('https://unstop.com/o/zspXwvc?utm_medium=Share&utm_source=shortUrl');
+                  window.open('https://unstop.com/p/network-in-code-indian-institute-of-science-iisc-bangalore-1415099');
                 }
               }}
             >
